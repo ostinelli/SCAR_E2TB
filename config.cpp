@@ -19,7 +19,7 @@ class CfgFactionClasses
     class NO_CATEGORY;
     class SCAR_E2TB_Category: NO_CATEGORY
     {
-        displayName = "SCAR E2TB";
+        displayName = "E2TB";
     };
 };
 
