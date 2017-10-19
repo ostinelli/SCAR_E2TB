@@ -13,7 +13,7 @@ class display3DEN
                 };
                 class scar_E2TB_ExportTool
                 {
-                    text    = "SCAR_E2TB: Export to Terrain Builder";
+                    text    = $STR_SCAR_E2TB_EdenMenu;
                     picture = "\scar_e2tb\gfx\logo.paa";
                     action  = "[] call scar_E2TB_fnc_exportFrom3DEN;";
                 };
