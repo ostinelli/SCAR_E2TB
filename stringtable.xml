@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="SCAR_E2TB">
+    <Package name="Main">
+        <Key ID="STR_SCAR_E2TB_Module">
+            <English>Player Actions Module</English>
+            <Italian>Modulo Azioni del Giocatore</Italian>
+        </Key>
+        <Key ID="STR_SCAR_E2TB_EdenMenu">
+            <English>SCAR E2TB: Export to Terrain Builder</English>
+            <Italian>SCAR E2TB: Esporta a Terrain Builder</Italian>
+        </Key>
+        <Key ID="STR_SCAR_E2TB_CopyToClipboard">
+            <English>Copy the map objects to the clipboard</English>
+            <Italian>Copia gli oggetti in mappa negli appunti</Italian>
+        </Key>
+        <Key ID="STR_SCAR_E2TB_CopiedToClipboard">
+            <English>All map objects have been copied to the clipboard.</English>
+            <Italian>Tutti gli oggetti in mappa sono stati copiati negli appunti.</Italian>
+        </Key>
+    </Package>
+</Project>
