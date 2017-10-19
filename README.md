@@ -1,6 +1,6 @@
 ![E2TB logo](https://cldup.com/isZPFlSHn0.png)
 
-# E2TB: Export to Terrain Builder
+# [E2TB] Export to Terrain Builder
 
 **E2TB** is a small module for Arma 3 that allows you to export data to Terrain Builder in `.lbt` file format.
 
@@ -12,10 +12,6 @@ If you have tried to import from EDEN or from any other custom tools that genera
 
 You may notice that one of the cubes above is slightly tilted. If we could fix that, that'd be great.
 
-## Download
-
-You can get the module from [Steam](http://steamcommunity.com/sharedfiles/filedetails/?id=1145478729).
-
 ## How does it work
 
   * Copy the objects to the clipboard:
@@ -23,6 +19,10 @@ You can get the module from [Steam](http://steamcommunity.com/sharedfiles/filede
     * From within a mission (SP): run the action `Copy the map objects to the clipboard`. To do this you'll first need to drop the `SCAR_E2TB_Module` in your mission.
   * Copy the contents of the clipboard in a file and save it with the extension `.lbt`
   * From within your map in Terrain Builder: `File > Import > Objects`
+
+## Download
+
+You can get the module from [Steam](http://steamcommunity.com/sharedfiles/filedetails/?id=1174073713).
 
 ## Thank you
 
