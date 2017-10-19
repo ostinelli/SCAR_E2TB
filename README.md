@@ -2,11 +2,11 @@
 
 # E2TB: Export to Terrain Builder
 
-**E2TB** is a small module for Arma 3 that allows you to export data to Terrain Builder in `.lbt` files' format.
+**E2TB** is a small module for Arma 3 that allows you to export data to Terrain Builder in `.lbt` file format.
 
 
 ## Why
-If you have tried to import from EDEN or other custom tools in Terrain Builder, you may have seen the hassle of objects' rotations being often incorrect. This fixes most of those issues. You can check out results in this comparison image:
+If you have tried to import from EDEN or from any other custom tools that generate objects while in mission to Terrain Builder, you may have seen the hassle of objects' rotations being often incorrect. This fixes most of those issues. You can check out results in this comparison image:
 
 ![E2TB Comparison](https://cldup.com/eOdeb2Gtga.jpg)
 
@@ -37,7 +37,7 @@ Thanks to all alpha and beta testers, in particular:
   * cring0
   * Adanteh
   * HorribleGoat
-  * T_D I
+  * T_D
 
 ...and all the other folks involved in the discussions in Discord's Arma3 `#terrain_makers` channel in those memorable days of October 18th and 19th 2017.
 
