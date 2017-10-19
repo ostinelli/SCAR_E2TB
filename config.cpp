@@ -8,19 +8,19 @@ class CfgPatches
         weapons[] = {};
         requiredVersion = 1.0;
         requiredAddons[] = {
-			"3den"
-		};
+            "3den"
+        };
         fileName = "scar_e2tb.pbo";
     };
 };
 
 class CfgFactionClasses
 {
-	class NO_CATEGORY;
-	class SCAR_E2TB_Category: NO_CATEGORY
-	{
-		displayName = "SCAR E2TB";
-	};
+    class NO_CATEGORY;
+    class SCAR_E2TB_Category: NO_CATEGORY
+    {
+        displayName = "SCAR E2TB";
+    };
 };
 
 class CfgVehicles

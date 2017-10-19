@@ -34,43 +34,43 @@ private _exports = [format["objects%1", _lb]];
 
 // loop objects
 {
-	if (
-	    !(_x isKindOf "Logic") &&
-	    !(_x IsKindOf "Man") &&
+    if (
+        !(_x isKindOf "Logic") &&
+        !(_x IsKindOf "Man") &&
         !(isObjectHidden _x)
-	) then {
-		// model
-		private _modelInfo = (getModelInfo _x) select 0;
-		private _modelName = (_modelInfo splitString ".") select 0;
+    ) then {
+        // model
+        private _modelInfo = (getModelInfo _x) select 0;
+        private _modelName = (_modelInfo splitString ".") select 0;
 
-		// position
-		private _pos  = getPosATL _x;
-		private _posX = ((_pos select 0) + 200000); // TB eastern offset
-		private _posY = (_pos select 1);
-		private _posZ = (_pos select 2);
+        // position
+        private _pos  = getPosATL _x;
+        private _posX = ((_pos select 0) + 200000); // TB eastern offset
+        private _posY = (_pos select 1);
+        private _posZ = (_pos select 2);
 
-		// pos
-		private _up    = vectorUp _x;
-		private _dir   = vectorDir _x;
-		private _aside = _dir vectorCrossProduct _up;
+        // pos
+        private _up    = vectorUp _x;
+        private _dir   = vectorDir _x;
+        private _aside = _dir vectorCrossProduct _up;
 
-		// decomp
-		_up params ["_upX", "_upY", "_upZ"];
-		_dir params ["_dirX", "_dirY", "_dirZ"];
-		_aside params ["_asideX", "_asideY", "_asideZ"];
+        // decomp
+        _up params ["_upX", "_upY", "_upZ"];
+        _dir params ["_dirX", "_dirY", "_dirZ"];
+        _aside params ["_asideX", "_asideY", "_asideZ"];
 
-		// build line with COLUMN format
-		private _entry = format["%1 %2 %3 %4 %5 %6 %7 %8 %9 %10 %11 %12 0 %13%14",
-			_asideX toFixed DECIMALS, _asideZ toFixed DECIMALS, _asideY toFixed DECIMALS,
-			_upX toFixed DECIMALS, _upZ toFixed DECIMALS, _upY toFixed DECIMALS,
-			_dirX toFixed DECIMALS, _dirZ toFixed DECIMALS, _dirY toFixed DECIMALS,
-			_posX toFixed DECIMALS, _posZ toFixed DECIMALS, _posY toFixed DECIMALS,
-			_modelName, _lb
-		];
+        // build line with COLUMN format
+        private _entry = format["%1 %2 %3 %4 %5 %6 %7 %8 %9 %10 %11 %12 0 %13%14",
+            _asideX toFixed DECIMALS, _asideZ toFixed DECIMALS, _asideY toFixed DECIMALS,
+            _upX toFixed DECIMALS, _upZ toFixed DECIMALS, _upY toFixed DECIMALS,
+            _dirX toFixed DECIMALS, _dirZ toFixed DECIMALS, _dirY toFixed DECIMALS,
+            _posX toFixed DECIMALS, _posZ toFixed DECIMALS, _posY toFixed DECIMALS,
+            _modelName, _lb
+        ];
 
-		// push
-		_exports pushBack _entry;
-	};
+        // push
+        _exports pushBack _entry;
+    };
 } forEach _entities;
 
 // join

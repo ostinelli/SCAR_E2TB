@@ -21,5 +21,5 @@ class SCAR_E2TB_Module: Module_F
     isTriggerActivated = 0;
     isDisposable       = 0;
     function           = "SCAR_E2TB_fnc_initModule";
- 	functionPriority   = 1;
+    functionPriority   = 1;
 };
