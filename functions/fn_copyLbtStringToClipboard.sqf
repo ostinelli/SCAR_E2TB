@@ -34,13 +34,16 @@ private _exports = [format["objects%1", _lb]];
 
 // loop objects
 {
-    if (
-        !(_x isKindOf "Logic") &&
-        !(_x IsKindOf "Man") &&
-        !(isObjectHidden _x)
-    ) then {
-        // model
-        private _modelInfo = (getModelInfo _x) select 0;
+    // model
+ 	private _modelInfo = (getModelInfo _x) select 0;
+
+	if (
+	    !(_x isKindOf "Logic") &&
+	    !(_x IsKindOf "Man") &&
+        !(isObjectHidden _x) &&
+        !(isNil "_modelInfo")
+	) then {
+        //  name
         private _modelName = (_modelInfo splitString ".") select 0;
 
         // position
@@ -70,7 +73,7 @@ private _exports = [format["objects%1", _lb]];
 
         // push
         _exports pushBack _entry;
-    };
+	};
 } forEach _entities;
 
 // join
