@@ -20,6 +20,14 @@ You may notice that one of the cubes above is slightly tilted. If we could fix t
   * Copy the contents of the clipboard in a file and save it with the extension `.lbt`
   * From within your map in Terrain Builder: `File > Import > Objects`
 
+## Scale
+
+E2TB will use the size has reported by the following tools:
+
+  * XCam
+  * Surface Painter
+  * Map Builder
+
 ## Download
 
 You can get the module from [Steam](http://steamcommunity.com/sharedfiles/filedetails/?id=1174073713).
