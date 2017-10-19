@@ -34,7 +34,11 @@ private _exports = [format["objects%1", _lb]];
 
 // loop objects
 {
-	if !(_x isKindOf "Logic" || _x IsKindOf "Man") then {
+	if (
+	    !(_x isKindOf "Logic") &&
+	    !(_x IsKindOf "Man") &&
+        !(isObjectHidden _x)
+	) then {
 		// model
 		private _modelInfo = (getModelInfo _x) select 0;
 		private _modelName = (_modelInfo splitString ".") select 0;
