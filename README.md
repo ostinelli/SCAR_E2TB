@@ -20,7 +20,7 @@ You can get the module from [Steam](http://steamcommunity.com/sharedfiles/filede
 
   * Copy the objects to the clipboard:
     * From EDEN: click on the menu `Tools > SCAR E2TB: Export to Terrain Builder`
-    * From within a mission (SP): run the action `Copy the map objects to the clipboard`
+    * From within a mission (SP): run the action `Copy the map objects to the clipboard`. To do this you'll first need to drop the `SCAR_E2TB_Module` in your mission.
   * Copy the contents of the clipboard in a file and save it with the extension `.lbt`
   * From within your map in Terrain Builder: `File > Import > Objects`
 
