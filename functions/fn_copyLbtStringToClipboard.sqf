@@ -57,6 +57,17 @@ private _exports = [format["objects%1", _lb]];
         private _dir   = vectorDir _x;
         private _aside = _dir vectorCrossProduct _up;
 
+        // scale
+        private _scale = _x getVariable ["xCamScaleVal", objNull];                                    // XCam
+        if (_scale isEqualTo objNull) then { _scale = _x getVariable ["Sp_var_scale", objNull]; };    // Surface Painter
+        if (_scale isEqualTo objNull) then { _scale = _x getVariable ["MB_ObjVar_Scale", objNull]; }; // Map Builder
+        if !(_scale isEqualTo objNull) then {
+            // multiply
+            _up = _up vectorMultiply _scale;
+            _dir = _dir vectorMultiply _scale;
+            _aside = _aside vectorMultiply _scale;
+        };
+
         // decomp
         _up params ["_upX", "_upY", "_upZ"];
         _dir params ["_dirX", "_dirY", "_dirZ"];
