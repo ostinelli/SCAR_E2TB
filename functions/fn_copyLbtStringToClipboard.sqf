@@ -16,7 +16,7 @@
 
     Thank you:
     @Lappihuan @zgmrvn @mikero @W4lly63
-    @ianbanks @Ice @cring0 @Adanteh @HorribleGoat @T_D I
+    @ianbanks @Ice @cring0 @Adanteh @HorribleGoat @T_D
     ...and all the other folks involved in the discussions in Discord's Arma3 #terrain_makers channel
     in those memorable days of October 18th and 19th 2017.
 
