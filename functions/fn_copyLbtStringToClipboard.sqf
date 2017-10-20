@@ -62,6 +62,8 @@ private _exports = [format["objects%1", _lb]];
         if (_scale isEqualTo objNull) then { _scale = _x getVariable ["Sp_var_scale", objNull]; };    // Surface Painter
         if (_scale isEqualTo objNull) then { _scale = _x getVariable ["MB_ObjVar_Scale", objNull]; }; // Map Builder
         if !(_scale isEqualTo objNull) then {
+            // ensure it's a number
+            if ((typeName _scale) == "STRING") then { _scale = parseNumber(_scale); };
             // multiply
             _up = _up vectorMultiply _scale;
             _dir = _dir vectorMultiply _scale;
