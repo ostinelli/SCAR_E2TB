@@ -84,7 +84,7 @@ private _entries = [];
         if (_scale isEqualTo objNull) then { _scale = 1; };
 
         // build line
-        private _values = [_posX, _posY, _rotZ, _rotX, _rotY, _scale, _posZ] apply { _x toFixed 8 };
+        private _values = [_posX, _posY, _rotZ, _rotX, _rotY, _scale, _posZ] apply { _x toFixed DECIMALS };
         private _entry = ([str _modelName] + _values) joinString ";";
 
         // push
