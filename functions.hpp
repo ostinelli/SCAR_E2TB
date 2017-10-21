@@ -8,7 +8,7 @@ class CfgFunctions {
             class initModule {};
             class exportFrom3DEN {};
             class exportFromMission {};
-            class copyLbtStringToClipboard {};
+            class copyObjectsStringToClipboard {};
         };
     };
 };

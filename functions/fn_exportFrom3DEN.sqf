@@ -2,7 +2,7 @@
     Author: _SCAR
 
     Description:
-    Export all 3DEN entities to clipboard, in LBT format.
+    Export all 3DEN entities to clipboard.
 
     Return:
     true
@@ -15,7 +15,7 @@
 private _entities = all3DENEntities select 0;
 
 // copy to clip
-[_entities] call scar_E2TB_fnc_copyLbtStringToClipboard;
+[_entities] call SCAR_E2TB_fnc_copyObjectsStringToClipboard;
 
 // message
 disableSerialization;

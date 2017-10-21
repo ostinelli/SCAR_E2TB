@@ -6,8 +6,8 @@
             <Italian>Modulo E2TB Azioni del Giocatore</Italian>
         </Key>
         <Key ID="STR_SCAR_E2TB_3DEN_MenuBar">
-            <English>Export to Terrain Builder (LBT format)</English>
-            <Italian>Esporta a Terrain Builder (formato LBT)</Italian>
+            <English>Export to Terrain Builder (E2TB)</English>
+            <Italian>Esporta a Terrain Builder (E2TB)</Italian>
         </Key>
         <Key ID="STR_SCAR_E2TB_CopyToClipboard">
             <English>Copy the map objects to the clipboard</English>

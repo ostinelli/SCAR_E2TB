@@ -18,9 +18,15 @@ if (_activated) then {
         // wait
         waitUntil {!isNull player};
         // add action
-        player addAction [(localize "STR_SCAR_E2TB_CopyToClipboard"), {
-            [] spawn SCAR_E2TB_fnc_exportFromMission;
-        }];
+        player addAction [
+            format ["<t color='#2f8600'>%1</t>", (localize "STR_SCAR_E2TB_CopyToClipboard")],
+            {
+                [] spawn SCAR_E2TB_fnc_exportFromMission;
+            },
+            nil,  // arguments
+            1,    // priority
+            false // showWindow
+        ];
     };
 };
 

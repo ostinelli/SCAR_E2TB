@@ -8,12 +8,12 @@ class display3DEN
             class Items
             {
                 class MissionExport {
-                    items[] += {"MissionTerrainBuilderLbt"};
+                    items[] += {"E2TBMissionTerrainBuilder"};
                 };
 
-                class MissionTerrainBuilderLbt {
+                class E2TBMissionTerrainBuilder {
                     text   = "$STR_SCAR_E2TB_3DEN_MenuBar";
-                    data   = "MissionExportTerrainBuilderLbt";
+                    data   = "E2TBMissionTerrainBuilder";
                     action = "[] spawn SCAR_E2TB_fnc_exportFrom3DEN;";
                 };
             };
