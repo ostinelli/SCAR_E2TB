@@ -20,3 +20,12 @@ class display3DEN
         };
     };
 };
+
+class Cfg3DEN {
+    class Notifications {
+        class SCAR_E2TB_exportDone {
+            text = "$STR_SCAR_E2TB_CopiedToClipboard";
+            isWarning = 0;
+        };
+    };
+};
