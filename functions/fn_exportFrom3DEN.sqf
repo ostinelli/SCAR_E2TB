@@ -18,6 +18,7 @@ private _entities = all3DENEntities select 0;
 [_entities] call scar_E2TB_fnc_copyLbtStringToClipboard;
 
 // message
+disableSerialization;
 ["scar_E2TB_exportDone", 5] call BIS_fnc_3DENNotification;
 
 // return

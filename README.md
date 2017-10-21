@@ -15,7 +15,7 @@ You may notice that one of the cubes above is slightly tilted. If we could fix t
 ## How does it work
 
   * Copy the objects to the clipboard:
-    * From EDEN: click on the menu `Tools > SCAR E2TB: Export to Terrain Builder`
+    * From EDEN: click on the menu `Export > Export to Terrain Builder (LBT)`
     * From within a mission (SP): run the action `Copy the map objects to the clipboard`. To do this you'll first need to drop the `SCAR_E2TB_Module` in your mission.
   * Copy the contents of the clipboard in a file and save it with the extension `.lbt`
   * From within your map in Terrain Builder: `File > Import > Objects`

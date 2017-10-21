@@ -5,9 +5,9 @@
             <English>Player Actions Module</English>
             <Italian>Modulo Azioni del Giocatore</Italian>
         </Key>
-        <Key ID="STR_SCAR_E2TB_EdenMenu">
-            <English>[E2TB] Export to Terrain Builder</English>
-            <Italian>[E2TB] Esporta a Terrain Builder</Italian>
+        <Key ID="STR_SCAR_E2TB_3DEN_MenuBar">
+            <English>Export to Terrain Builder (LBT format)</English>
+            <Italian>Esporta a Terrain Builder (formato LBT)</Italian>
         </Key>
         <Key ID="STR_SCAR_E2TB_CopyToClipboard">
             <English>Copy the map objects to the clipboard</English>
