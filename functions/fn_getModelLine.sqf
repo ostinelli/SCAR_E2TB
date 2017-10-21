@@ -29,7 +29,7 @@ params ["_obj"];
 
 // model
 private _modelInfo = (getModelInfo _obj) select 0;
-private _entry = objNull;
+private _line = objNull;
 
 if (
     !(_obj isKindOf "Logic") &&
@@ -82,8 +82,8 @@ if (
 
     // build line
     private _values = [_posX, _posY, _rotZ, _rotX, _rotY, _scale, _posZ] apply { _x toFixed DECIMALS };
-    _entry = ([str _modelName] + _values) joinString ";";
+    _line = ([str _modelName] + _values) joinString ";";
 };
 
 // return
-_entry
+_line

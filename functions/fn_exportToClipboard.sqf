@@ -45,8 +45,7 @@ private _lines = [];
 
     // get line
     private _line = _x call SCAR_E2TB_fnc_getModelLine;
-    if !(_x isEqualTo objNull) then {
-        // push
+    if !(_line isEqualTo objNull) then {
         _lines pushBack _line;
     };
 } forEach _entities;
