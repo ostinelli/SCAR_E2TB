@@ -29,4 +29,5 @@ class CfgVehicles
 };
 
 #include "functions.hpp"
+#include "gui.hpp"
 #include "eden.hpp"

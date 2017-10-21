@@ -15,8 +15,14 @@
 // get entities
 private _entities = allMissionObjects "All";
 
+// disable input
+disableUserInput true;
+
 // copy to clip
-[_entities] call SCAR_E2TB_fnc_copyObjectsStringToClipboard;
+[_entities] call SCAR_E2TB_fnc_exportToClipboard;
+
+// enable input
+disableUserInput false;
 
 // message
 private _null = [(localize "STR_SCAR_E2TB_CopiedToClipboard"), "SCAR_E2TB", true, false] call BIS_fnc_guiMessage;

@@ -17,5 +17,9 @@
             <English>All map objects have been copied to the clipboard.</English>
             <Italian>Tutti gli oggetti in mappa sono stati copiati negli appunti.</Italian>
         </Key>
+        <Key ID="STR_SCAR_E2TB_Exporting">
+            <English>Exporting objects (%1 of %2)</English>
+            <Italian>Esportazione in corso (%1 of %2)</Italian>
+        </Key>
     </Package>
 </Project>
