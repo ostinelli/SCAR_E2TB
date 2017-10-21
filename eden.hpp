@@ -7,15 +7,15 @@ class display3DEN
         {
             class Items
             {
-				class MissionExport {
-					items[] += {"MissionTerrainBuilderLbt"};
-				};
+                class MissionExport {
+                    items[] += {"MissionTerrainBuilderLbt"};
+                };
 
-				class MissionTerrainBuilderLbt {
-					text   = "$STR_SCAR_E2TB_3DEN_MenuBar";
-					data   = "MissionExportTerrainBuilderLbt";
-					action = "[] spawn SCAR_E2TB_fnc_exportFrom3DEN;";
-				};
+                class MissionTerrainBuilderLbt {
+                    text   = "$STR_SCAR_E2TB_3DEN_MenuBar";
+                    data   = "MissionExportTerrainBuilderLbt";
+                    action = "[] spawn SCAR_E2TB_fnc_exportFrom3DEN;";
+                };
             };
         };
     };
