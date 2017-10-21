@@ -7,14 +7,13 @@ class SCAR_E2TB_ProgressBar
     show = 0;
     movingEnable = 0;
     idd = -1;
-	onLoad = "uiNamespace setVariable [""SCAR_E2TB_ProgressBar_Display"", (_this select 0)];";
-	onUnload = "uiNamespace setVariable [""SCAR_E2TB_ProgressBar_Display"", nil];";
+    onLoad = "uiNamespace setVariable [""SCAR_E2TB_ProgressBar_Display"", (_this select 0)];";
+    onUnload = "uiNamespace setVariable [""SCAR_E2TB_ProgressBar_Display"", nil];";
 
     class ControlsBackground {
 
         class SCAR_E2TB_Select_Mainback: RscPicture
         {
-
             idc = -1;
             x = 0.2 * safezoneW + safezoneX;
             y = 0.302 * safezoneH + safezoneY;
