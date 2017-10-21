@@ -82,6 +82,7 @@ private _entries = [];
         if (_scale isEqualTo objNull) then { _scale = _x getVariable ["Sp_var_scale", objNull]; };    // Surface Painter
         if (_scale isEqualTo objNull) then { _scale = _x getVariable ["MB_ObjVar_Scale", objNull]; }; // Map Builder
         if (_scale isEqualTo objNull) then { _scale = 1; };
+        if ((typeName _scale) == "STRING") then { _scale = parseNumber(_scale); };
 
         // build line
         private _values = [_posX, _posY, _rotZ, _rotX, _rotY, _scale, _posZ] apply { _x toFixed DECIMALS };
