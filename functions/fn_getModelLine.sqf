@@ -2,7 +2,7 @@
     Authors: _SCAR, ianbanks
 
     Description:
-    Create the export line for the provided model. all provided entities to the clipboard.
+    Create the export line for the provided model.
 
     Parameter(s);
     OBJECT
