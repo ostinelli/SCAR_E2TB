@@ -23,7 +23,7 @@
     LICENSE IS MIT. keep this header if you use it elsewhere.
 */
 
-params ["_obj"];
+private _obj = _this;
 
 #define DECIMALS 8
 
