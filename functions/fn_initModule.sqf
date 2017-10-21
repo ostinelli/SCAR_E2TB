@@ -19,7 +19,7 @@ if (_activated) then {
         waitUntil {!isNull player};
         // add action
         player addAction [(localize "STR_SCAR_E2TB_CopyToClipboard"), {
-            [] call SCAR_E2TB_fnc_exportFromMission;
+            [] spawn SCAR_E2TB_fnc_exportFromMission;
         }];
     };
 };

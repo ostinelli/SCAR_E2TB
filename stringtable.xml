@@ -2,8 +2,8 @@
 <Project name="SCAR_E2TB">
     <Package name="Main">
         <Key ID="STR_SCAR_E2TB_Module">
-            <English>Player Actions Module</English>
-            <Italian>Modulo Azioni del Giocatore</Italian>
+            <English>E2TB Player Actions Module</English>
+            <Italian>Modulo E2TB Azioni del Giocatore</Italian>
         </Key>
         <Key ID="STR_SCAR_E2TB_3DEN_MenuBar">
             <English>Export to Terrain Builder (LBT format)</English>

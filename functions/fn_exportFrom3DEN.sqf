@@ -19,7 +19,7 @@ private _entities = all3DENEntities select 0;
 
 // message
 disableSerialization;
-["scar_E2TB_exportDone", 5] call BIS_fnc_3DENNotification;
+["SCAR_E2TB_exportDone", 5] call BIS_fnc_3DENNotification;
 
 // return
 true

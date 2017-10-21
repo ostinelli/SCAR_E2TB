@@ -9,7 +9,7 @@
     true
 
     Example:
-    [] call SCAR_E2TB_fnc_exportFromMission
+    [] spawn SCAR_E2TB_fnc_exportFromMission
 */
 
 // get entities
@@ -19,9 +19,7 @@ private _entities = allMissionObjects "All";
 [_entities] call scar_E2TB_fnc_copyLbtStringToClipboard;
 
 // message
-private _null = [] spawn {
-    private _null = [(localize "STR_SCAR_E2TB_CopiedToClipboard"), "SCAR_E2TB", true, false] call BIS_fnc_guiMessage;
-};
+private _null = [(localize "STR_SCAR_E2TB_CopiedToClipboard"), "SCAR_E2TB", true, false] call BIS_fnc_guiMessage;
 
 // return
 true
