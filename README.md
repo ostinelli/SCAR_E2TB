@@ -26,6 +26,17 @@ E2TB will use the size has reported by the following tools:
   * Surface Painter
   * Map Builder
 
+## Options
+
+You can set up E2TB to ignore certain models and not export them. To do so, just define into the `init.sqf` of your mission the variable `SCAR_E2TB_ignoreModels`. For instance:
+
+```sqf
+SCAR_E2TB_ignoreModels = [
+    "reservoirtank_01_military_f",
+    "busstop_01_sign_f"
+];
+```
+
 ## Download
 
 You can get the module from [Steam](http://steamcommunity.com/sharedfiles/filedetails/?id=1174073713).
