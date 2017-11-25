@@ -16,6 +16,10 @@
 
 params ["_entities"];
 
+// init defaults
+if (isNil "SCAR_E2TB_ignoreModels") then { SCAR_E2TB_ignoreModels = []; };
+SCAR_E2TB_ignoreModels = SCAR_E2TB_ignoreModels apply { toLower(_x) };
+
 // progress bar IDc
 private _textId = 34516;
 private _barId  = 34517;

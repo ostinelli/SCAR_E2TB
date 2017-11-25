@@ -5,11 +5,11 @@ class CfgFunctions {
         class functions {
             file = "\scar_e2tb\functions";
 
-            class initModule {};
             class exportFrom3DEN {};
             class exportFromMission {};
             class exportToClipboard {};
             class getModelLine {};
+            class initModule {};
         };
     };
 };

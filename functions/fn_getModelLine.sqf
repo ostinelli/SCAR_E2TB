@@ -4,7 +4,7 @@
     Description:
     Create the export line for the provided model.
 
-    Parameter(s);
+    Parameter(s):
     OBJECT
 
     Return:
@@ -28,20 +28,21 @@ private _obj = _this;
 #define DECIMALS 8
 
 // model
-private _modelInfo = (getModelInfo _obj) select 0;
-private _line = objNull;
+private _line     = objNull;
+private _modelP3d = (getModelInfo _obj) select 0;
+if (isNil "_modelP3d") exitWith { _line; };
+
+// model name
+private _modelName = toLower((_modelP3d splitString ".") select 0);
 
 if (
     !(_obj isKindOf "Logic") &&
     !(_obj IsKindOf "Man") &&
     !(isObjectHidden _obj) &&
-    !(isNil "_modelInfo")
+    !(_modelName in SCAR_E2TB_ignoreModels)
 ) then {
     // init
     private ["_rotX", "_rotY", "_rotZ"];
-
-    //  name
-    private _modelName = (_modelInfo splitString ".") select 0;
 
     // position
     private _pos  = getPosATL _obj;

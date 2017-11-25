@@ -14,6 +14,7 @@
 private _activated = param [2, true, [true]];
 
 if (_activated) then {
+
     if (hasInterface && !isMultiplayer) then {
         // wait
         waitUntil {!isNull player};
