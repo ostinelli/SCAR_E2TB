@@ -41,9 +41,20 @@ SCAR_E2TB_ignoreModels = [
 
 You can get the module from [Steam](http://steamcommunity.com/sharedfiles/filedetails/?id=1174073713).
 
+## Note
+
+There are certain objects that behave very differently in EDEN and Terrain Builder. These are the objects that have the named property `placement=slopelandcontact` into the geometry LOD.
+
+The intended behaviour for these objects is to stay flat on the ground and adapt to the terrain. Though, in EDEN you are able to easily position them horizontally, but once imported in Terrain Builder they will follow the ground. As an example, if you were to put a barbed wire on top of a bunker that is on a slope, once imported in Terrain Builder the barbed wire will follow the underneath terrain slope and hence be in an incorrect position.
+
+As a compromise, E2TB assumes that all of those objects are used as normally intended to be: on the ground, following the terrain. This should cover 95% of usage. If you use those objects differently, you will have to manually fix them in Terrain Builder.
+
+We are working on alternative options to see if we can come up with some other solutions, as in the end it boils down to the fact that EDEN and Terrain Builder do not treat these objects in the same way.
+
+
 ## Thank you
 
-Thanks to all alpha and beta testers, in particular:
+Thanks to the Arma3 discord channel, in particular:
 
   * Lappihuan
   * zgmrvn

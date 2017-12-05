@@ -50,27 +50,36 @@ if (
     _posX = _posX + 200000; // TB eastern offset
 
     // compute angles
-    private _up    = vectorUp _obj;
-    private _dir   = vectorDir _obj;
-    private _aside = _dir vectorCrossProduct _up;
-
-    // from <https://foxhound.international/sqf-snippets/export-arma-3-to-terrain-builder>
-    if (abs (_up select 1) < 0.999999) then {
-        _rotX = -asin (_up select 1);
-
-        private _signCosX = if (cos _rotX < 0) then { -1 } else { 1 };
-
-        _rotY = ((_up select 0) * _signCosX) atan2 ((_up select 2) * _signCosX);
-        _rotZ = (-(_aside select 1) * _signCosX) atan2 ((_dir select 1) * _signCosX);
+    private _slopeModels = call SCAR_E2TB_fnc_slopeModels;
+    if (_modelName in _slopeModels) then {
+        // these objects behave differently in EDEN and in TB, so we need to approximate and just set these objects on the ground
+        _rotX = 0;
+        _rotY = 0;
+        _rotZ = getDirVisual _obj;
+        _posZ = 0;
     } else {
-        _rotZ = 0;
+        private _up    = vectorUp _obj;
+        private _dir   = vectorDir _obj;
+        private _aside = _dir vectorCrossProduct _up;
 
-        if (_up select 1 < 0) then {
-            _rotX = 90;
-            _rotY = (_dir select 0) atan2 (_dir select 2);
+        // from <https://foxhound.international/sqf-snippets/export-arma-3-to-terrain-builder>
+        if (abs (_up select 1) < 0.999999) then {
+            _rotX = -asin (_up select 1);
+
+            private _signCosX = if (cos _rotX < 0) then { -1 } else { 1 };
+
+            _rotY = ((_up select 0) * _signCosX) atan2 ((_up select 2) * _signCosX);
+            _rotZ = (-(_aside select 1) * _signCosX) atan2 ((_dir select 1) * _signCosX);
         } else {
-            _rotX = -90;
-            _rotY = (-(_dir select 0)) atan2 (-(_dir select 2));
+            _rotZ = 0;
+
+            if (_up select 1 < 0) then {
+                _rotX = 90;
+                _rotY = (_dir select 0) atan2 (_dir select 2);
+            } else {
+                _rotX = -90;
+                _rotY = (-(_dir select 0)) atan2 (-(_dir select 2));
+            };
         };
     };
 
@@ -83,6 +92,7 @@ if (
 
     // build line
     private _values = [_posX, _posY, _rotZ, _rotX, _rotY, _scale, _posZ] apply { _x toFixed DECIMALS };
+
     _line = ([str _modelName] + _values) joinString ";";
 };
 

@@ -10,6 +10,7 @@ class CfgFunctions {
             class exportToClipboard {};
             class getModelLine {};
             class initModule {};
+			class slopeModels {};
         };
     };
 };
