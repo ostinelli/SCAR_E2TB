@@ -306,6 +306,7 @@
     "plot_istan3_short",
     "plot_provizorni",
     "plot_zed-drevo2",
+	"plot_ohrada",
     "zed",
     "zed2",
     "zed2_civil",
