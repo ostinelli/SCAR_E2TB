@@ -4,12 +4,17 @@
     Description:
     Export all 3DEN entities to clipboard.
 
+    Parameter(s):
+    0: BOOLEAN - true for absolute positioning, false for relative.
+
     Return:
     true
 
     Example:
-    [] call SCAR_E2TB_fnc_exportFrom3DEN
+    [false] call SCAR_E2TB_fnc_exportFrom3DEN
 */
+
+params ["_isAbsolute"];
 
 // get entities
 private _entities = all3DENEntities select 0;
@@ -18,7 +23,7 @@ private _entities = all3DENEntities select 0;
 disableUserInput true;
 
 // copy to clip
-[_entities] call SCAR_E2TB_fnc_exportToClipboard;
+[_entities, _isAbsolute] call SCAR_E2TB_fnc_exportToClipboard;
 
 // enable input
 disableUserInput false;

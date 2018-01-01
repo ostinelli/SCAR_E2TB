@@ -5,12 +5,17 @@
     Export all map entities to clipboard.
     You need to put the SCAR_E2TB_Module on the map to access the action that runs this script.
 
+    Parameter(s):
+    0: BOOLEAN - true for absolute positioning, false for relative.
+
     Return:
     true
 
     Example:
     [] spawn SCAR_E2TB_fnc_exportFromMission
 */
+
+params ["_isAbsolute"];
 
 // get entities
 private _entities = allMissionObjects "All";
@@ -19,7 +24,7 @@ private _entities = allMissionObjects "All";
 disableUserInput true;
 
 // copy to clip
-[_entities] call SCAR_E2TB_fnc_exportToClipboard;
+[_entities, _isAbsolute] call SCAR_E2TB_fnc_exportToClipboard;
 
 // enable input
 disableUserInput false;

@@ -13,10 +13,12 @@ If you have tried to import from EDEN or from any other custom tools that genera
 ## How does it work
 
   * Copy the objects to the clipboard:
-    * From EDEN: click on the menu `Export > Export to Terrain Builder (E2TB)`
-    * From within a mission (SP): run the action `Copy the map objects to the clipboard`. To do this you'll first need to drop the `SCAR_E2TB_Module` in your mission.
+    * From EDEN: click on the menu `Export > Export to Terrain Builder (E2TB)` or the `absolute position` alternative
+    * From within a mission (SP): run the action `Copy the map objects to the clipboard` or the `absolute position` alternative. To do this you'll first need to drop the `SCAR_E2TB_Module` in your mission.
   * Copy the contents of the clipboard in a file and save it with the extension `.txt`
-  * From within your map in Terrain Builder: `File > Import > Objects`
+  * From within your map in Terrain Builder: `File > Import > Objects`. If you exported with `absolute position`, ensure that you import the objects in Terrain Builder by checking `advanced options > absolute` in the import dialog.
+
+> According to our experience, absolute position works better with large objects such as Big Rocks. Your mileage may vary.
 
 ## Scale
 
@@ -56,11 +58,11 @@ We are working on alternative options to see if we can come up with some other s
 
 Thanks to the Arma3 discord channel, in particular:
 
+  * ianbanks (for the absolute code positioning and TB matrices)
   * Lappihuan
   * zgmrvn
   * mikero
   * W4lly63
-  * ianbanks
   * Ice
   * cring0
   * Adanteh

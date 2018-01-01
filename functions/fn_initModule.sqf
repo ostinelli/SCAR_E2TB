@@ -18,11 +18,24 @@ if (_activated) then {
     if (hasInterface && !isMultiplayer) then {
         // wait
         waitUntil {!isNull player};
-        // add action
+
+        // add actions
+
+        // normal
         player addAction [
             format ["<t color='#2f8600'>%1</t>", (localize "STR_SCAR_E2TB_CopyToClipboard")],
             {
-                [] spawn SCAR_E2TB_fnc_exportFromMission;
+                [false] spawn SCAR_E2TB_fnc_exportFromMission;
+            },
+            nil,  // arguments
+            1,    // priority
+            false // showWindow
+        ];
+        // absolute
+        player addAction [
+            format ["<t color='#2f8600'>%1</t>", (localize "STR_SCAR_E2TB_CopyToClipboardAbsolute")],
+            {
+                [true] spawn SCAR_E2TB_fnc_exportFromMission;
             },
             nil,  // arguments
             1,    // priority

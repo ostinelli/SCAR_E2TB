@@ -9,9 +9,17 @@
             <English>Export to Terrain Builder (E2TB)</English>
             <Italian>Esporta a Terrain Builder (E2TB)</Italian>
         </Key>
+        <Key ID="STR_SCAR_E2TB_3DEN_MenuBarAbsolute">
+            <English>Export to Terrain Builder (E2TB, absolute position)</English>
+            <Italian>Esporta a Terrain Builder (E2TB, posizione assoluta)</Italian>
+        </Key>
         <Key ID="STR_SCAR_E2TB_CopyToClipboard">
             <English>Copy the map objects to the clipboard</English>
             <Italian>Copia gli oggetti in mappa negli appunti</Italian>
+        </Key>
+        <Key ID="STR_SCAR_E2TB_CopyToClipboardAbsolute">
+            <English>Copy the map objects to the clipboard (absolute position)</English>
+            <Italian>Copia gli oggetti in mappa negli appunti (posizione assoluta)</Italian>
         </Key>
         <Key ID="STR_SCAR_E2TB_CopiedToClipboard">
             <English>All map objects have been copied to the clipboard.</English>
@@ -20,6 +28,10 @@
         <Key ID="STR_SCAR_E2TB_Exporting">
             <English>Exporting objects (%1 of %2)</English>
             <Italian>Esportazione in corso (%1 of %2)</Italian>
+        </Key>
+        <Key ID="STR_SCAR_E2TB_ExportingAbsolute">
+            <English>Exporting objects in absolute position (%1 of %2)</English>
+            <Italian>Esportazione in corso in posizione assoluta (%1 of %2)</Italian>
         </Key>
     </Package>
 </Project>

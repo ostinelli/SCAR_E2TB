@@ -8,8 +8,13 @@ class CfgFunctions {
             class exportFrom3DEN {};
             class exportFromMission {};
             class exportToClipboard {};
+            class getAngles {};
             class getModelLine {};
+            class getPos {};
+            class getScale {};
+            class getTerrainBuilderMatrix {};
             class initModule {};
+            class matrixVectorMultiply {};
 			class slopeModels {};
         };
     };

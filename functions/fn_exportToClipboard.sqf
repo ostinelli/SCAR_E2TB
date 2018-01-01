@@ -6,19 +6,21 @@
 
     Parameter(s);
     0: ARRAY of ENTITIES
+    1: BOOLEAN - true for absolute positioning, false for relative.
 
     Return:
     true
 
     Example:
-    [_entities] call SCAR_E2TB_fnc_exportToClipboard
+    [_entities, false] call SCAR_E2TB_fnc_exportToClipboard
 */
 
-params ["_entities"];
+params ["_entities", "_isAbsolute"];
 
 // init defaults
 if (isNil "SCAR_E2TB_ignoreModels") then { SCAR_E2TB_ignoreModels = []; };
 SCAR_E2TB_ignoreModels = SCAR_E2TB_ignoreModels apply { toLower(_x) };
+SCAR_E2TB_slopeModels  = [] call SCAR_E2TB_fnc_slopeModels;
 
 // progress bar IDc
 private _textId = 34516;
@@ -40,15 +42,20 @@ private _tot   = count _entities;
 private _i     = 0;
 private _lines = [];
 
+private _barTextMsg = switch (_isAbsolute) do {
+    case true: {"STR_SCAR_E2TB_ExportingAbsolute" };
+    default { "STR_SCAR_E2TB_Exporting" };
+};
+
 // loop objects
 {
     // progress bar
     _i = _i + 1;
-    _barText ctrlSetText format [(localize "STR_SCAR_E2TB_Exporting"), _i, _tot];
+    _barText ctrlSetText format [(localize _barTextMsg), _i, _tot];
     _bar progressSetPosition (_i / _tot);
 
     // get line
-    private _line = _x call SCAR_E2TB_fnc_getModelLine;
+    private _line = [_x, _isAbsolute] call SCAR_E2TB_fnc_getModelLine;
     if !(_line isEqualTo objNull) then {
         _lines pushBack _line;
     };

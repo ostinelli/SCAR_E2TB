@@ -8,13 +8,19 @@ class display3DEN
             class Items
             {
                 class MissionExport {
-                    items[] += {"E2TBMissionTerrainBuilder"};
+                    items[] += {"E2TBMissionTerrainBuilder", "E2TBMissionTerrainBuilderAbsolute"};
                 };
 
                 class E2TBMissionTerrainBuilder {
                     text   = "$STR_SCAR_E2TB_3DEN_MenuBar";
                     data   = "E2TBMissionTerrainBuilder";
-                    action = "[] spawn SCAR_E2TB_fnc_exportFrom3DEN;";
+                    action = "[false] spawn SCAR_E2TB_fnc_exportFrom3DEN;";
+                };
+
+                class E2TBMissionTerrainBuilderAbsolute {
+                    text   = "$STR_SCAR_E2TB_3DEN_MenuBarAbsolute";
+                    data   = "E2TBMissionTerrainBuilder";
+                    action = "[true] spawn SCAR_E2TB_fnc_exportFrom3DEN;";
                 };
             };
         };
