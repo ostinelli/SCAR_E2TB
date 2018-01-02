@@ -39,6 +39,14 @@ SCAR_E2TB_ignoreModels = [
 ];
 ```
 
+You can also set E2TB to force the slope export for some models:
+
+```sqf
+SCAR_E2TB_slopeModels = [
+    "my_custom_fence"
+];
+```
+
 ## Download
 
 You can get the module from [Steam](http://steamcommunity.com/sharedfiles/filedetails/?id=1174073713).

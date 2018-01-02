@@ -20,7 +20,9 @@ params ["_entities", "_isAbsolute"];
 // init defaults
 if (isNil "SCAR_E2TB_ignoreModels") then { SCAR_E2TB_ignoreModels = []; };
 SCAR_E2TB_ignoreModels = SCAR_E2TB_ignoreModels apply { toLower(_x) };
-SCAR_E2TB_slopeModels  = [] call SCAR_E2TB_fnc_slopeModels;
+
+if (isNil "SCAR_E2TB_slopeModels") then { SCAR_E2TB_slopeModels = []; };
+SCAR_E2TB_slopeModels = SCAR_E2TB_slopeModels + (call SCAR_E2TB_fnc_slopeModels);
 
 // progress bar IDc
 private _textId = 34516;
