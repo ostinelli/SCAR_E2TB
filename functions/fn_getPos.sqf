@@ -22,10 +22,11 @@
 
 params ["_obj", "_modelName", "_isAbsolute", "_scale", "_rotX", "_rotY", "_rotZ"];
 
+// pos
+private _posATL = getPosATL _obj;
+
 private _pos = if (_isAbsolute) then {
     // absolute
-
-    private _posATL = getPosATL _obj;
 
     if (_modelName in SCAR_E2TB_slopeModels) then {
         // force object on ground if slope model
